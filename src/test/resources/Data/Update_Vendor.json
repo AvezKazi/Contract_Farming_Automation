@@ -1,0 +1,15 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Name":"RS Mehta Traders",
+"Mobile":"9639632582",
+"Email":"rstraders@sample.com",
+"Address":"Pune",
+"GST_Number":"25HYGTR7458A1Z6",
+"Pan_Number":"TRFGY7785L",
+"Pan_Image":"C:\\Users\\User\\Desktop\\All projects\\Contract Farming\\testing images\\download (13).jpg",
+"Aadhar_Number":"658742158966",
+"Aadhar_Image":"C:\\Users\\User\\Desktop\\All projects\\Contract Farming\\testing images\\aadhaar-card-7579588_640.png"
+}
+}
