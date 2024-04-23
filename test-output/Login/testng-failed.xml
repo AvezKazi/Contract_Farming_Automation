@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Login]">
+  <test thread-count="5" name="Add_Buyer_Testcase(failed)">
+    <parameter name="Url" value="http://192.168.1.13/contract_farming/admin/login"/>
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="Testcases.Add_Buyer_Testcase">
+        <methods>
+          <include name="teardown"/>
+          <include name="endReport"/>
+          <include name="setup"/>
+          <include name="beforeclass"/>
+          <include name="Add_Subadmins"/>
+        </methods>
+      </class> <!-- Testcases.Add_Buyer_Testcase -->
+    </classes>
+  </test> <!-- Add_Buyer_Testcase(failed) -->
+</suite> <!-- Failed suite [Login] -->

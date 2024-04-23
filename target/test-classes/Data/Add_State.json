@@ -1,0 +1,17 @@
+{
+"Valid": {
+"Email":"admin@gmail.com" ,
+"Password":"123456",
+"State_Name":"Goa",
+"State_Code":"GA",
+"Select_State":"Goa",
+"District_Name":"Panjim",
+"District_Code":"PJ",
+"Select_district":"Panjim",
+"Taluka_Name":"Tiswadi",
+"Taluka_Code":"TS",
+"Select_Block":"Tiswadi",
+"Village_Name":"Ardaka",
+"Village_Code":"VJ"
+}
+}

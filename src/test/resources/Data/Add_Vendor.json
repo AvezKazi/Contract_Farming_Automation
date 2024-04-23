@@ -1,0 +1,15 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Name":"RK Traders",
+"Mobile":"9879879870",
+"Email":"rktraders@sample.com",
+"Address":"Pune",
+"GST_Number":"23ASWED7458A1Z1",
+"Pan_Number":"EMBUJ8854D",
+"Pan_Image":"C:\\Users\\User\\Desktop\\All projects\\Contract Farming\\testing images\\download (13).jpg",
+"Aadhar_Number":"985832520011",
+"Aadhar_Image":"C:\\Users\\User\\Desktop\\All projects\\Contract Farming\\testing images\\aadhaar-card-7579588_640.png"
+}
+}

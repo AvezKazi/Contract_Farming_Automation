@@ -1,0 +1,11 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Name":"Suresh Mehta",
+"Mobile":"8585858512",
+"Email":"suresh@sample.com",
+"Address":"Pune",
+"Password":"Sample@123"
+}
+}
