@@ -3,7 +3,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.testng.Assert;
 import com.relevantcodes.extentreports.LogStatus;
 import ExtentReport.ExtentReport;
 
@@ -55,13 +54,37 @@ public class Add_Buyer_PO {
   @FindBy(how= How.XPATH, using="(//button[@type='button'])[2]")
   WebElement Click_OK;
   
-  public String verifytitle()
-  {
-  String MyTitle = driver.getTitle();
-  System.out.println("My Page Title  = "+MyTitle);
-  return MyTitle;
-  }
- 
+  @FindBy(how=How.XPATH,using="//div[@class='card-header']")	
+  WebElement Txt_Title;
+
+@FindBy(how=How.XPATH,using="//div[@class='page-title']")	
+WebElement Txt_Title1;
+  
+public String Title()
+{
+	String MyTitle = driver.getTitle();
+	System.out.println("My Page Title  = "+MyTitle);
+	return MyTitle;
+}
+//public String getBuyerTitleText() {
+//    return BuyerTitle.getText();
+//}
+//
+//public String generateExpectedTitle() {
+//    // Example logic to generate the expected title dynamically
+//    return "Expected Title";
+
+  
+//public String verify_Name() {
+//    String buyerTitle = BuyerTitle.getText(); // Assuming BuyerTitle is a WebElement representing a title
+//    System.out.println("Buyer Name  = "+buyerTitle);
+//    return buyerTitle;
+//}
+//public String generateExpectedTitle() {
+//    // Some logic to generate the expected title dynamically
+//    return "Expected Title";
+//}
+  
   public void EnterEmail (String args)
 	{
 		txt_AdminEmail.sendKeys(args);
@@ -133,11 +156,12 @@ public class Add_Buyer_PO {
 	   Click_OK.click(); 
 	   ExtentReport.test.log(LogStatus.INFO, "Cliked on OK Button", "Click_OK");
  }
- public void Add_Buyer(String loginEmail, String loginPassword,String Name,String Mobile,String Email,String Address,String GST_Number) throws InterruptedException
+ 
+
+ public boolean  Add_Buyer_with_all_ValidData(String loginEmail, String loginPassword,String Name,String Mobile,String Email,String Address,String GST_Number) throws InterruptedException
  {
 	 try {
 		 
-	 
 	   EnterEmail(loginEmail);
 	   Thread.sleep(2000);
 	   EnterPassword(loginPassword);
@@ -166,18 +190,13 @@ public class Add_Buyer_PO {
 	   Thread.sleep(2000);
 	   Ok();
 	   Thread.sleep(2000);
-	   verifytitle();
-	   Assert.assertEquals("verifytitle", true);
-	   System.out.print("MyTitle");
-		}
-	catch(Exception e) {
-		e.printStackTrace();	
-		   driver.close();
+	   return true;
+	    } catch (Exception e) {
+	        // Log or handle the exception
+	        // If the data addition operation fails, return false
+	        return false;
+	    }
 	}
-	 driver.close();
-   }
-	     	   		    	   
 }
-
 
 

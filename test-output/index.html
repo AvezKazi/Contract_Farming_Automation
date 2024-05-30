@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Login">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login" title="Testcases.Add_Buyer_Testcase" class="method navigator-link" hash-for-method="Add_Subadmins">Add_Subadmins</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Login" title="Testcases.Add_Buyer_Testcase" class="method navigator-link" hash-for-method="Add_Buyer_With_all_Valid_Data">Add_Buyer_With_all_Valid_Data</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Login -->
@@ -126,14 +126,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Add_Subadmins">
-                  </a> <!-- Add_Subadmins -->
-                  <span class="method-name">Add_Subadmins</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
-	at PO.Add_Buyer_PO.Add_Buyer(Add_Buyer_PO.java:174)
-	at Testcases.Add_Buyer_Testcase.Add_Subadmins(Add_Buyer_Testcase.java:68)
+                  <a name="Add_Buyer_With_all_Valid_Data">
+                  </a> <!-- Add_Buyer_With_all_Valid_Data -->
+                  <span class="method-name">Add_Buyer_With_all_Valid_Data</span>
+                  <div class="stack-trace">java.lang.AssertionError: Data was not added successfully expected [true] but found [false]
+	at Testcases.Add_Buyer_Testcase.Add_Buyer_With_all_Valid_Data(Add_Buyer_Testcase.java:75)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -150,7 +149,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Login&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Add_Buyer_Testcase&quot;&gt;
-    &lt;parameter name=&quot;Url&quot; value=&quot;http://192.168.1.13/contract_farming/admin/login&quot;/&gt;
+    &lt;parameter name=&quot;Url&quot; value=&quot;http://192.168.1.9/contract_farming/admin/login&quot;/&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Testcases.Add_Buyer_Testcase&quot;/&gt;
@@ -195,14 +194,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Add_Subadmins')
+data.setCell(0, 1, 'Add_Buyer_With_all_Valid_Data')
 data.setCell(0, 2, 'Testcases.Add_Buyer_Testcase')
-data.setCell(0, 3, 28770);
+data.setCell(0, 3, 26643);
 window.suiteTableData['Login']= { tableData: data, tableDiv: 'times-div-Login'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Login">
               </div> <!-- times-div-Login -->
             </div> <!-- times-div -->
@@ -234,22 +233,22 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setup(Chrome, http://192.168.1.13/contract_farming/admin/login)</span>
-                <span class="method-start">313 ms</span>
+                <span class="method-name">setup(Chrome, http://192.168.1.9/contract_farming/admin/login)</span>
+                <span class="method-start">352 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Add_Subadmins</span>
-                <span class="method-start">8500 ms</span>
+                <span class="method-name">Add_Buyer_With_all_Valid_Data</span>
+                <span class="method-start">8873 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">37286 ms</span>
+                <span class="method-start">35522 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">37606 ms</span>
+                <span class="method-start">36256 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

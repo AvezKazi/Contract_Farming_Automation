@@ -4,7 +4,7 @@
 		<parameter name= "Browser" value= "Chrome"/>
 		<parameter name = "Url" value= "http://192.168.1.13/contract_farming/admin/login"/>
 		<classes>
-			<class name = "Testcases.Add_State_Testcase"/>
+			<class name = "Testcases.Location_Testcase"/>
 		</classes>
 	</test>
 </suite>

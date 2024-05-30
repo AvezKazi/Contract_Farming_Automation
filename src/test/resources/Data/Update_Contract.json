@@ -1,0 +1,23 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Contract_Title":" ",
+"Select_typeofFarmer":"",
+"Select_Farmer":"",
+"Select_Buyer":"",
+"Select_Land":"",
+"Select_Crop":"",
+"Farm_Image":"",
+"Farm_Document":"",
+"Contract_StartDate":"",
+"Contract_EndDate":"",
+"Date_Of_Sowing":"",
+"Price_Per_Kg":"",
+"Proposed_Yield":"",
+"Company_Clause":"",
+"Select_Resource_Type":"",
+"Select_Resource_Name":"",
+"Resource_Quantity":""
+}
+}

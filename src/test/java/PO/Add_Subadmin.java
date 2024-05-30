@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.relevantcodes.extentreports.LogStatus;
+
+import ExtentReport.ExtentReport;
+
 public class Add_Subadmin {
 		  WebDriver driver;
 		     {
@@ -56,61 +60,75 @@ public class Add_Subadmin {
 		        public void EnterEmail (String args)
 		    	{
 		    		txt_AdminEmail.sendKeys(args);
+		    		ExtentReport.test.log(LogStatus.INFO, "Enter the Admin Email id", args);
 		    	}
 		    	public void EnterPassword (String args)
 		    	{
 		    		txt_AdminPassword.sendKeys(args);
+		    		ExtentReport.test.log(LogStatus.INFO, "Enter the Admin Password", args);
 		    	}
 		    	public void ClickLogin ()
 		    	{
 		    		Btn_Login.click();
+		    		ExtentReport.test.log(LogStatus.INFO, "Cliked on Login Button", "Clicked");
 		    	}
 		    	public void Members()
 		        {
 		    		Members.click();
+		    		ExtentReport.test.log(LogStatus.INFO, "Click on Member Option", "Clicked");
 		        }
 		        public void Subadmin()
 		        {
 		        	Subadmin.click();
+		        	ExtentReport.test.log(LogStatus.INFO, "Click on Subadmin", "Clicked");
 		        }
 		        public void Add_Subadmin()
 		        {
 		        	Add_Subadmin.click();
+		        	ExtentReport.test.log(LogStatus.INFO, "Clicked on Add Subadmin Button", "Clicked");
 		        }
 		       public void Name(String args)
 		       {
 		    	   Name.sendKeys(args);
+		    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Subadmin Name as ", args);
 		       }
 		       public void Mobile(String args)
 		       {
 		    	   Mobile.sendKeys(args);
+		    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Mobile Number as ", args);
 		       }
 		       public void Email (String args)
 		       {
 		    	   Email.sendKeys(args);
+		    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Email Id as", args);
 		       }
 		       public void Address (String args)
 		       {
 		    	   Address.sendKeys(args);
+		    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Address as", args);
 		       }
 		       public void Password (String args)
 		       {
 		    	   Password.sendKeys(args);
+		    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Password as", args);
 		       }
 		
 		       public void Add()
 		       {
 		    	   Add.click(); 
+		    	   ExtentReport.test.log(LogStatus.INFO, "Cliked on Add Button", "Clicked");
 		       }
 		       public void Yes()
 		       {
 		    	   Click_YES.click(); 
+		    	   ExtentReport.test.log(LogStatus.INFO, "Cliked On YES Button To confirm", "Clicked");
 		       }
 		       public void Ok()
 		       {
 		    	   Click_OK.click(); 
+		    	   ExtentReport.test.log(LogStatus.INFO, "Cliked on OK Button", "Clicked");
 		       }
-		       public void Add_Subadmins(String loginEmail, String loginPassword,String Name,String Mobile,String Email,String Address,String Password) throws InterruptedException
+		       public void Add_Subadmins_with_ValidData(String loginEmail, String loginPassword,String Name,String Mobile,String Email,String Address,String Password) throws InterruptedException
 		       {
 		    	   
 		    	   EnterEmail(loginEmail);

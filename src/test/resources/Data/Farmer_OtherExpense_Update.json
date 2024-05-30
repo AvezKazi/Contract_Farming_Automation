@@ -1,0 +1,14 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Date":"",
+"Select_Category":"",
+"Expense_Name":"",
+"Quantity":"",
+"Total_Amount":"",
+"Remark":"  ",
+"Bill_Image":"",
+"Verification_Status":""
+}
+}

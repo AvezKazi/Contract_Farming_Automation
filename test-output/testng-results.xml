@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-23T12:38:04 IST" name="Login" finished-at="2024-04-23T12:38:42 IST" duration-ms="37993">
+  <suite started-at="2024-05-14T12:59:36 IST" name="Login" finished-at="2024-05-14T13:00:12 IST" duration-ms="36653">
     <groups>
     </groups>
-    <test started-at="2024-04-23T12:38:04 IST" name="Add_Buyer_Testcase" finished-at="2024-04-23T12:38:42 IST" duration-ms="37993">
+    <test started-at="2024-05-14T12:59:36 IST" name="Add_Buyer_Testcase" finished-at="2024-05-14T13:00:12 IST" duration-ms="36653">
       <class name="Testcases.Add_Buyer_Testcase">
-        <test-method is-config="true" signature="beforeclass()[pri:0, instance:Testcases.Add_Buyer_Testcase@7fd50002]" started-at="2024-04-23T12:38:04 IST" name="beforeclass" finished-at="2024-04-23T12:38:04 IST" duration-ms="292" status="PASS">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:Testcases.Add_Buyer_Testcase@c430e6c]" started-at="2024-05-14T12:59:36 IST" name="beforeclass" finished-at="2024-05-14T12:59:36 IST" duration-ms="331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeclass -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:Testcases.Add_Buyer_Testcase@7fd50002]" started-at="2024-04-23T12:38:04 IST" name="setup" finished-at="2024-04-23T12:38:12 IST" duration-ms="8184" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:Testcases.Add_Buyer_Testcase@c430e6c]" started-at="2024-05-14T12:59:36 IST" name="setup" finished-at="2024-05-14T12:59:44 IST" duration-ms="8517" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,22 +20,24 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://192.168.1.13/contract_farming/admin/login]]>
+                <![CDATA[http://192.168.1.9/contract_farming/admin/login]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Add_Subadmins()[pri:0, instance:Testcases.Add_Buyer_Testcase@7fd50002]" started-at="2024-04-23T12:38:12 IST" name="Add_Subadmins" finished-at="2024-04-23T12:38:41 IST" duration-ms="28770" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="Add_Buyer_With_all_Valid_Data()[pri:0, instance:Testcases.Add_Buyer_Testcase@c430e6c]" started-at="2024-05-14T12:59:44 IST" name="Add_Buyer_With_all_Valid_Data" finished-at="2024-05-14T13:00:11 IST" duration-ms="26643" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null]]>
+              <![CDATA[Data was not added successfully expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
-at PO.Add_Buyer_PO.Add_Buyer(Add_Buyer_PO.java:174)
-at Testcases.Add_Buyer_Testcase.Add_Subadmins(Add_Buyer_Testcase.java:68)
+              <![CDATA[java.lang.AssertionError: Data was not added successfully expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at Testcases.Add_Buyer_Testcase.Add_Buyer_With_all_Valid_Data(Add_Buyer_Testcase.java:75)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,15 +68,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Add_Subadmins -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.Add_Buyer_Testcase@7fd50002]" started-at="2024-04-23T12:38:41 IST" name="teardown" finished-at="2024-04-23T12:38:41 IST" duration-ms="319" status="PASS">
+        </test-method> <!-- Add_Buyer_With_all_Valid_Data -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.Add_Buyer_Testcase@c430e6c]" started-at="2024-05-14T13:00:11 IST" name="teardown" finished-at="2024-05-14T13:00:12 IST" duration-ms="734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:Testcases.Add_Buyer_Testcase@7fd50002]" started-at="2024-04-23T12:38:41 IST" name="endReport" finished-at="2024-04-23T12:38:42 IST" duration-ms="347" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:Testcases.Add_Buyer_Testcase@c430e6c]" started-at="2024-05-14T13:00:12 IST" name="endReport" finished-at="2024-05-14T13:00:12 IST" duration-ms="336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name ="Login" verbose="1">
+	<test name ="Add_Contract_Testcase">
+		<parameter name= "Browser" value= "Chrome"/>
+		<parameter name = "Url" value= "http://192.168.1.17/contract_farming/admin/login"/>
+		<classes>
+			<class name = "Testcases.Add_Contract_Testcase"/>
+		</classes>
+	</test>
+</suite>

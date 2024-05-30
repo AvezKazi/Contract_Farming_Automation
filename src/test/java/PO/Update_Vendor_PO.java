@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.relevantcodes.extentreports.LogStatus;
+
+import ExtentReport.ExtentReport;
+
 public class Update_Vendor_PO {
 	WebDriver driver;
     {
@@ -68,86 +72,104 @@ WebElement Click_OK;
 public void EnterEmail (String args)
 {
 	txt_AdminEmail.sendKeys(args);
+	ExtentReport.test.log(LogStatus.INFO, "Enter the Email id", args);
 }
 public void EnterPassword (String args)
 {
 	txt_AdminPassword.sendKeys(args);
+	ExtentReport.test.log(LogStatus.INFO, "Enter the Admin Password as ",args );
 }
 public void ClickLogin ()
 {
 	Btn_Login.click();
+	ExtentReport.test.log(LogStatus.INFO, "CLicked on the Login Button","Clicked" );
 }
 public void Members()
 {
 	Members.click();
+	ExtentReport.test.log(LogStatus.INFO, "Clicked on the Members Option","Clicked" );
 }
 public void Vendor()
 {
 	 Vendor.click();
+	 ExtentReport.test.log(LogStatus.INFO, "Clicked on the Vendors Option","Clicked" );
 }
 public void Update_Vendor()
 {
 	 Update_Vendor.click();
+	 ExtentReport.test.log(LogStatus.INFO, "Clicked on the Update Button","Clicked" );
 }
 public void Name(String args)
 {
 	Name.clear();
    Name.sendKeys(args);
+   ExtentReport.test.log(LogStatus.INFO, "Enter the Name as",args );
 }
 public void Mobile(String args)
 {
 	Mobile.clear();
    Mobile.sendKeys(args);
+   ExtentReport.test.log(LogStatus.INFO, "Enter the Mobile Number as ",args );
 }
 public void Email (String args)
 {
 	Email.clear();
    Email.sendKeys(args);
+   ExtentReport.test.log(LogStatus.INFO, "Entered the Email Id as ",args );
 }
 public void Address (String args)
 {
 	Address.clear();
    Address.sendKeys(args);
+   ExtentReport.test.log(LogStatus.INFO, "Entered the Address as ",args );
 }
 public void GST_Number (String args)
 {
 	GST_Number.clear();
 	GST_Number.sendKeys(args);
+	ExtentReport.test.log(LogStatus.INFO, "Entered the GST Number as ",args );
 }
 public void Pan_Number (String args)
 {
 	Pan_Number.clear();
 	Pan_Number.sendKeys(args);
+	ExtentReport.test.log(LogStatus.INFO, "Enter the Pan Number as ",args );
 }
 public void Pan_Image (String args)
 {
 	Pan_Image.clear();
 	Pan_Image.sendKeys(args);
+	ExtentReport.test.log(LogStatus.INFO, "Upload the Pan Image as ",args );
 }
 public void Aadhar_Number (String args)
 {
 	Aadhar_Number.clear();
 	Aadhar_Number.sendKeys(args);
+	ExtentReport.test.log(LogStatus.INFO, "Enter the Aadhar Number as ",args );
 }
 public void aadhar_image (String args)
 {
 	aadhar_image.clear();
 	aadhar_image.sendKeys(args);
+	ExtentReport.test.log(LogStatus.INFO, "Upload the Aadhar Image as ",args );
 }
 
 public void Update()
 {
    Update.click(); 
+   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Update Button","Clicked" );
 }
 public void Yes()
 {
    Click_YES.click(); 
+   ExtentReport.test.log(LogStatus.INFO, "Clicked on the YES Button","Clicked" );
 }
 public void Ok()
 {
    Click_OK.click(); 
+   ExtentReport.test.log(LogStatus.INFO, "Clicked on the OK Button", "Clicked");
 }
-public void Update_Vendors(String loginEmail, String loginPassword,String Name,String Mobile,String Email,String Address,String GST_Number,String Pan_Number,String Pan_Image,String Aadhar_Number,String Aadhar_Image) throws InterruptedException
+public void Update_Vendors_with_validData(String loginEmail, String loginPassword,String Name,String Mobile,String Email,String Address,String GST_Number,String Pan_Number,String Pan_Image,String Aadhar_Number,String Aadhar_Image) throws InterruptedException
 {
    
    EnterEmail(loginEmail);

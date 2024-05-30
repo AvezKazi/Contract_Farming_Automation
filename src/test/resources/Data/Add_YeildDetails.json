@@ -1,0 +1,15 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Select_Crop":"",
+"Gross_Weight":"",
+"Tare_Weight":"",
+"Image":"",
+"Driver_Name":"",
+"Vehicle_Number":"  ",
+"Date_Pickup":"",
+"Charge1":"",
+"Charge2":""
+}
+}

@@ -1,0 +1,15 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Visit_Date":"",
+"Harvest_Status":"",
+"Remarks":"",
+"Expected_Yield":"",
+"Image":"",
+"Image_2":"  ",
+"Select_Resource":"",
+"Resource_Name":"",
+"Quantity":""
+}
+}

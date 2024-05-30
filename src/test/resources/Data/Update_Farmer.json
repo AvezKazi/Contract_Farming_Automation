@@ -1,0 +1,27 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Select_Type":" ",
+"Profile_Image":"",
+"Name":"",
+"Mobile":"",
+"Email":"",
+"Description":"",
+"PanCard":"",
+"PanCard_Image":"",
+"Aadhar_Number":"",
+"MobAadhar_Imageile":"",
+"GST_NO":"",
+"StreetName":"",
+"Pincode":"",
+"State":"",
+"District":"",
+"Block":"",
+"Village":"",
+"Address":"",
+"Password":"",
+"Status":""
+
+}
+}

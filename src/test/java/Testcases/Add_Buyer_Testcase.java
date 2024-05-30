@@ -4,6 +4,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -43,6 +44,7 @@ public class Add_Buyer_Testcase {
 			}
 		}
 		}
+    
 	
 	@BeforeMethod
 	@Parameters({"Browser","Url"})
@@ -54,8 +56,10 @@ public class Add_Buyer_Testcase {
   	Thread.sleep(2000);
   	driver.manage().window().maximize();	
     }
+
 	@Test
-    public void Add_Subadmins () throws Throwable {
+	
+    public void Add_Buyer_With_all_Valid_Data () throws Throwable {
   	  String loginEmail= Buyer.getJSONObject("Valid").getString("loginEmail");
 	  String loginPassword = Buyer.getJSONObject("Valid").getString("loginPassword");
       String Name= Buyer.getJSONObject("Valid").getString("Name");
@@ -63,10 +67,13 @@ public class Add_Buyer_Testcase {
       String Email = Buyer.getJSONObject("Valid").getString("Email");
       String Address= Buyer.getJSONObject("Valid").getString("Address");
       String GST_Number= Buyer.getJSONObject("Valid").getString("GST_Number");
-      ExtentReport.test=ExtentReport.extent.startTest("Add_Subadmins");
+      ExtentReport.test=ExtentReport.extent.startTest("Add_Buyer_With_all_Valid_Data");
       Add_Buyer_PO Obj = PageFactory.initElements(driver, Add_Buyer_PO.class);
-  	  Obj.Add_Buyer(loginEmail, loginPassword, Name, Mobile, Email, Address, GST_Number);
-    }
+      boolean isDataAddedSuccessfully = Obj.Add_Buyer_with_all_ValidData(loginEmail, loginPassword, Name, Mobile, Email, Address, GST_Number);
+      
+      // Assert based on the result of the data addition operation
+      Assert.assertTrue(isDataAddedSuccessfully, "Data was not added successfully");
+	}     
   	@AfterClass 
 	public void endReport()
 	{ExtentReport.extent.flush();
@@ -74,6 +81,8 @@ public class Add_Buyer_Testcase {
 	public void teardown()
     {
 	ExtentReport.extent.endTest(ExtentReport.test);
-	driver.quit();
+	  
+           driver.quit();
+
 	}  
 	}

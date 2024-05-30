@@ -6,11 +6,14 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import ExtentReport.ExtentReport;
 import PO.Add_Subadmin;
 import Utility.BrowserManager;
 
@@ -20,6 +23,7 @@ public class Add_Subadmin_Testcase {
     
     @BeforeClass
     public void loca ( ) throws Throwable {
+    	ExtentReport.startreport();
   	  InputStream data= null;
   	  try {
   		  String FileName= "data/Add_Subadmin.json";
@@ -49,7 +53,7 @@ public class Add_Subadmin_Testcase {
   	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @Test
-    public void Add_Subadmins () throws Throwable {
+    public void Add_Subadmins_with_all_the_Valid_Data () throws Throwable {
   	  String loginEmail= Subadmin.getJSONObject("Valid").getString("loginEmail");
 	  String loginPassword = Subadmin.getJSONObject("Valid").getString("loginPassword");
       String Name= Subadmin.getJSONObject("Valid").getString("Name");
@@ -57,8 +61,19 @@ public class Add_Subadmin_Testcase {
       String Email = Subadmin.getJSONObject("Valid").getString("Email");
       String Address= Subadmin.getJSONObject("Valid").getString("Address");
       String Password= Subadmin.getJSONObject("Valid").getString("Password");
+      ExtentReport.test=ExtentReport.extent.startTest("Add_Subadmins_with_all_the_Valid_Data");
       Add_Subadmin Obj = PageFactory.initElements(driver, Add_Subadmin.class);
-  	  Obj.Add_Subadmins(loginEmail, loginPassword, Name, Mobile, Email, Address, Password);
+  	  Obj.Add_Subadmins_with_ValidData(loginEmail, loginPassword, Name, Mobile, Email, Address, Password);
   	  
     }
-}
+    @AfterClass 
+	public void endReport()
+	{ExtentReport.extent.flush();
+    } @AfterMethod
+	public void teardown()
+    {
+	ExtentReport.extent.endTest(ExtentReport.test);
+	driver.quit();
+	}  
+	}
+

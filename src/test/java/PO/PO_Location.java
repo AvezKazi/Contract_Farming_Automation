@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 
+import com.relevantcodes.extentreports.LogStatus;
+
+import ExtentReport.ExtentReport;
+
 public class PO_Location {
 	  WebDriver driver;
 	     {
@@ -138,177 +142,218 @@ public class PO_Location {
 	        public void EnterEmail (String args)
 	    	{
 	    		txt_AdminEmail.sendKeys(args);
+	    		ExtentReport.test.log(LogStatus.INFO, "Enter the Email id", args);
 	    	}
 	    	public void EnterPassword (String args)
 	    	{
 	    		txt_AdminPassword.sendKeys(args);
+	    		ExtentReport.test.log(LogStatus.INFO, "Enter the Admin Password as ", args);
 	    	}
 	    	public void ClickLogin ()
 	    	{
 	    		Btn_Login.click();
+	    		ExtentReport.test.log(LogStatus.INFO, "Clicked on the Login Button","Clicked" );
 	    	}
 	        public void Location()
 	        {
 	        	Btn_Location.click();
+	        	ExtentReport.test.log(LogStatus.INFO, "Clicked on the Location Option","Clicked" );
 	        }
 	        public void state()
 	        {
 	        	State.click();
+	        	ExtentReport.test.log(LogStatus.INFO, "Clicked on State","Clicked" );
 	        }
 	       public void Add_State()
 	       {
 	    	   Click_on_State.click();
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clickede On Add State","Clicked" );
 	       }
 	       public void State_Name(String args)
 	       {
 	    	   state_Name.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the State Name as",args );
 	       }
 	       public void State_Code (String args)
 	       {
 	    	   state_Code.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the State COde as ",args );
 	       }
 	       public void Add()
 	       {
 	    	   Add_State.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Add Button","Clicked" );
 	       }
 	       public void Yes()
 	       {
 	    	   Click_YES.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the YES Button", "Clicked");
 	       }
 	       public void Ok()
 	       {
 	    	   Click_OK.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the OK Button","Clicked" );
 	       }
 	       public void Btn_LocationBack()
 	        {
 	    	   Btn_LocationBack.click();
+	    	   //xtentReport.test.log(LogStatus.INFO, "", );
 	        }
 	       
 	       public void Btn_Location1()
 	        {
 	    	   Btn_Location1.click();
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Location option again","clicked" );
 	        }
 	        public void District()
 	        {
 	        	District.click();
+	        	ExtentReport.test.log(LogStatus.INFO, "Clicked on the District option","Clicked" );
 	        }
 	       public void Click_on_District()
 	       {
 	    	   Click_on_District.click();
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Add District Button","Clicked" );
 	       }
 	       public void Select_State(String args)
 	       {
 	    	   Select_State.sendKeys(args);
 	    	   Select se = new Select(Select_State);
 	    	   se.selectByVisibleText(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Select the State as ",args );
 	       }
 	       public void District_Name (String args)
 	       {
 	    	   District_Name.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the District Name as ",args );
 	       }
 	       public void District_Code (String args)
 	       {
 	    	   District_Code.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the District Code",args );
 	       }
 	       public void Add_District()
 	       {
 	    	   Add_District.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Add District","Clicked" );
 	       }
 	       public void Yes1()
 	       {
 	    	   Click_YES1.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the YES Button","Clicked" );
 	       }
 	       public void Ok1()
 	       {
 	    	   Click_OK1.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the OK Button","Clicked" );
 	       }
 	       
 	       public void Btn_LocationBack1()
 	        {
 	    	   Btn_LocationBack.click();
+	    	   //ExtentReport.test.log(LogStatus.INFO, "", );
 	        }
 	       
 	       public void Btn_Location2()
 	        {
 	    	   Btn_Location1.click();
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Location Button","clicked" );
 	        }
 	        public void Taluka()
 	        {
 	        	Taluka.click();
+	        	ExtentReport.test.log(LogStatus.INFO, "Clicked on the Taluka Option","Clicked" );
 	        }
 	       public void Click_on_Taluka()
 	       {
 	    	   Click_on_Taluka.click();
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on Add Taluka Button","Clicked" );
 	       }
 	       public void Select_district(String args)
 	       {
 	    	   Select_district.sendKeys(args);
 	    	   Select se = new Select(Select_district);
 	    	   se.selectByVisibleText(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Select the Ditrict as ",args );
 	       }
 	       public void Taluka_Name (String args)
 	       {
 	    	   Taluka_Name.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Taluka Name as ",args );
 	       }
 	       public void Taluka_Code (String args)
 	       {
 	    	   Taluka_Code.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Taluka Code as ",args );
 	       }
 	       public void Add_Taluka()
 	       {
 	    	   Add_Taluka.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Add Button ","Clicked" );
 	       }
 	       public void Yes2()
 	       {
 	    	   Click_YES2.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the YES Button to confirm","Clicked" );
 	       }
 	       public void Ok2()
 	       {
 	    	   Click_OK2.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the OK Button","Clickec" );
 	       }
 	       
 	       public void Btn_LocationBack2()
 	        {
 	    	   Btn_LocationBack2.click();
+	    	   //ExtentReport.test.log(LogStatus.INFO, "", );
 	        }
 	       
 	       public void Btn_Location3()
 	        {
 	    	   Btn_Location3.click();
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Location Option","Clicked" );
 	        }
 	        public void Village()
 	        {
 	        	Village.click();
+	        	ExtentReport.test.log(LogStatus.INFO, "Clicked on the Village Option", "Clicked");
 	        }
 	       public void Click_on_Village()
 	       {
 	    	   Click_on_Village.click();
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on Add Village Button","Clicked" );
 	       }
 	       public void Select_Block(String args)
 	       {
 	    	   Select_Block.sendKeys(args);
 	    	   Select se = new Select(Select_Block);
 	    	   se.selectByVisibleText(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Select the Taluka name as ",args );
 	       }
 	       public void Village_Name (String args)
 	       {
 	    	   Village_Name.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Village Name as ",args );
 	       }
 	       public void Village_Code (String args)
 	       {
 	    	   Village_Code.sendKeys(args);
+	    	   ExtentReport.test.log(LogStatus.INFO, "Enter the Village Code as ", args);
 	       }
 	       public void Add_Village()
 	       {
 	    	   Add_Village.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the Add Button","Clicked" );
 	       }
 	       public void Yes3()
 	       {
 	    	   Click_YES1.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on the YES Button to confirm","Clicked" );
 	       }
 	       public void Ok3()
 	       {
 	    	   Click_OK1.click(); 
+	    	   ExtentReport.test.log(LogStatus.INFO, "Clicked on OK Button","Clicked" );
 	       }
 	       
 	       

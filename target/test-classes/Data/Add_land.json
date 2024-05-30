@@ -1,0 +1,28 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Farmer_Title":" ",
+"Farm_Image_1":"",
+"Farm_Image_2":"",
+"Upload_Document":"",
+"Soil_Survey_Report":"",
+"Select_Soil":"",
+"Total_Land":"",
+"Select_Dimension_Type":"",
+"Gat_Number":"",
+"Land_under_Cultivation":"",
+"Select_Rainfall_Type":"",
+"Latitude":"",
+"Longitude":"",
+"Climate_Conditions":"",
+"Address":"",
+"Select_Previous_Crop":"",
+"Description":"",
+"Select_Water_Source":"",
+"Select_Crop":"",
+"Status":"",
+"Verification_Status":""
+
+}
+}

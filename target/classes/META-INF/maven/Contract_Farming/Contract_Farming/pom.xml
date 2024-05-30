@@ -71,5 +71,10 @@
     <version>2.41.2</version>
 </dependency>
 
-</dependencies>
+  	<dependency>
+  		<groupId>TVS_Showroom</groupId>
+  		<artifactId>TVS_Showroom</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

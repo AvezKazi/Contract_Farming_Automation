@@ -5,10 +5,14 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import ExtentReport.ExtentReport;
 import PO.Add_Vendor_PO;
 import Utility.BrowserManager;
 
@@ -18,6 +22,7 @@ public class Add_Vendor_Testcase {
     
     @BeforeClass
     public void loca ( ) throws Throwable {
+    	ExtentReport.startreport();
   	  InputStream data= null;
   	  try {
   		  String FileName= "data/Add_Vendor.json";
@@ -47,7 +52,7 @@ public class Add_Vendor_Testcase {
   	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @Test
-    public void Add_Subadmins () throws Throwable {
+    public void Add_Vendor_with_all_the_valid_data () throws Throwable {
   	  String loginEmail= Vendor.getJSONObject("Valid").getString("loginEmail");
 	  String loginPassword = Vendor.getJSONObject("Valid").getString("loginPassword");
       String Name= Vendor.getJSONObject("Valid").getString("Name");
@@ -59,10 +64,21 @@ public class Add_Vendor_Testcase {
       String Pan_Image= Vendor.getJSONObject("Valid").getString("Pan_Image");
       String Aadhar_Number= Vendor.getJSONObject("Valid").getString("Aadhar_Number");
       String Aadhar_Image= Vendor.getJSONObject("Valid").getString("Aadhar_Image");
+      ExtentReport.test=ExtentReport.extent.startTest("Add_Vendor_with_all_the_valid_data");
       Add_Vendor_PO Obj = PageFactory.initElements(driver, Add_Vendor_PO.class);
-  	  Obj.Add_Vendors(loginEmail, loginPassword, Name, Mobile, Email, Address, GST_Number, Pan_Number, Pan_Image, Aadhar_Number, Aadhar_Image);
+  	  Obj.Add_Vendors_with_ValidData(loginEmail, loginPassword, Name, Mobile, Email, Address, GST_Number, Pan_Number, Pan_Image, Aadhar_Number, Aadhar_Image);
   	  
     }
-}
+    @AfterClass 
+   	public void endReport()
+   	{ExtentReport.extent.flush();
+       } @AfterMethod
+   	public void teardown()
+       {
+   	ExtentReport.extent.endTest(ExtentReport.test);
+   	driver.quit();
+   	}  
+   	}
+
 
 

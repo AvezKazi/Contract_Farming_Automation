@@ -1,0 +1,14 @@
+{
+"Valid": {
+"loginEmail":"admin@gmail.com" ,
+"loginPassword":"123456",
+"Account_Holder_Name":"RK Traders",
+"Account_Number":"04740100058999",
+"Re_Enter_AccountNUmber":"04740100058999",
+"Bank_Name":"Bnak of India",
+"Bank_Branch":"Kharadi",
+"Branch_Address":"Chandan Nagr Kharadi",
+"IFSC_Code":"BKID0000500",
+"Cheque_Image":"C:\\Users\\User\\Desktop\\All projects\\Contract Farming\\testing images\\aadhaar-card-7579588_640.png"
+}
+}
